@@ -14,8 +14,9 @@ html{
     margin: 10px;
     text-align: center;
     font-size: 3rem;
+    font-weight: bold;
     box-shadow: 2px 3px 4px;
-
+    max-width: 450px;
 }
 .display{
     background-color: rgb(74, 69, 69);
@@ -23,7 +24,7 @@ html{
     margin: .6rem;
     /* text-align: left; */
 }
-.buttons{
+/* .buttons{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -31,17 +32,25 @@ html{
     justify-content: space-around;
     align-items: center;
 
-}
+} */
 .first-row-btn{
     display: flex;
     flex-direction: row;
-    flex: initial;
 }
+
+
 button{
+
     padding: 1rem;
     font-size: 2rem;
     margin: .2rem;
     align-self: center;
+    border-radius: 2px;
+    width: 5rem;
+    height: 5rem;
     
+}
+button:hover{
+    box-shadow: 2px 2px black;
 }
 
