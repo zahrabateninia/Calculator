@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 html{
-    background-color: rgb(35, 43, 41);
+    background-color: rgb(58, 79, 74);
 }
 .calculator-container{
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: #ae1b1b;
+    background-color: #3e9b58;
     margin: 10px;
     text-align: center;
     font-size: 3rem;
@@ -35,9 +36,16 @@ html{
 } */
 .first-row-btn{
     display: flex;
+    justify-content: center;
     flex-direction: row;
+    gap: 10px;
 }
-
+.ac{
+    width: 10rem;
+}
+.del{
+    width: 12.5rem;
+}
 
 button{
 
