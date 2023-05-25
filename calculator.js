@@ -1,14 +1,14 @@
-function sum(num1,num2){
-    let sum = num1 + num2;
-    return sum;
+function add(num1,num2){
+    let add = num1 + num2;
+    return add;
 };
 function divide(num1,num2){
     let divide = num1/num2;
     return divide;
 };
-function minus(num1,num2){
-    let minus = num1 - num2;
-    return minus;
+function subtract(num1,num2){
+    let subtract = num1 - num2;
+    return subtract;
 }
 function multiply(num1,num2){
     let multiply = num1 * num2;
@@ -20,3 +20,19 @@ function multiply(num1,num2){
 //...implement the code
 //call the right function
 
+function operate(operator){
+    if (operator === "-"){
+        return subtract();
+    }
+    
+    if (operator === "+"){
+        return add();
+    }
+    if (operator === "÷"){
+        return divide();
+    }
+    if (operator === "×"){
+        return multiply();
+    }
+    
+}
