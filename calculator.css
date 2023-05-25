@@ -47,6 +47,10 @@ html{
     width: 12.5rem;
 }
 
+.last-row-btn{
+    margin-bottom: 16px;
+}
+
 button{
 
     padding: 1rem;
