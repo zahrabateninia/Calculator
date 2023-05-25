@@ -9,6 +9,7 @@ html{
 #calculator{
     display: flex;
     justify-content: center;
+    margin-top: 60px;
 }
 .calculator-container{
     text-align: center;
@@ -25,7 +26,7 @@ html{
 
 }
 .display{
-    background-color: rgb(74, 69, 69);
+    background-color: rgb(99, 91, 91);
     padding: 1rem;
     margin: .6rem;
     border-radius: 10px;
@@ -53,7 +54,7 @@ button{
     font-size: 2rem;
     margin: .3rem;
     align-self: center;
-    border-radius: 2px;
+    border-radius: 6px;
     width: 5rem;
     height: 5rem;
     
