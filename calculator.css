@@ -1,12 +1,15 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 html{
-    background-color: aquamarine;
+    background-color: rgb(35, 43, 41);
 }
 .calculator-container{
-    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     background-color: #ae1b1b;
     margin: 10px;
     text-align: center;
@@ -17,10 +20,28 @@ html{
 .display{
     background-color: rgb(74, 69, 69);
     padding: 1rem;
+    margin: .6rem;
     /* text-align: left; */
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.first-row-btn{
+    display: flex;
+    flex-direction: row;
+    flex: initial;
 }
 button{
     padding: 1rem;
     font-size: 2rem;
     margin: .2rem;
+    align-self: center;
+    
 }
+
