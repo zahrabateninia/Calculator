@@ -19,7 +19,6 @@ function multiply(num1,num2){
 
 //...implement the code
 //call the right function
-
 function operate(operator){
     if (operator === "-"){
         return subtract();
