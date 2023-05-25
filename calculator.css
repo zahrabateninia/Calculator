@@ -6,34 +6,30 @@
 html{
     background-color: rgb(58, 79, 74);
 }
+#calculator{
+    display: flex;
+    justify-content: center;
+}
 .calculator-container{
     text-align: center;
     display: flex;
-    flex-wrap: wrap;
+    border-radius: 5px;
     flex-direction: column;
     background-color: #3e9b58;
     margin: 10px;
-    text-align: center;
     font-size: 3rem;
     font-weight: bold;
     box-shadow: 2px 3px 4px;
-    max-width: 450px;
+    max-width: 500px;
+    min-width: 410px;
+
 }
 .display{
     background-color: rgb(74, 69, 69);
     padding: 1rem;
     margin: .6rem;
-    /* text-align: left; */
+    border-radius: 10px;
 }
-/* .buttons{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex: 1;
-    justify-content: space-around;
-    align-items: center;
-
-} */
 .first-row-btn{
     display: flex;
     justify-content: center;
@@ -55,7 +51,7 @@ button{
 
     padding: 1rem;
     font-size: 2rem;
-    margin: .2rem;
+    margin: .3rem;
     align-self: center;
     border-radius: 2px;
     width: 5rem;
