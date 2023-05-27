@@ -15,10 +15,10 @@ function multiply(num1,num2){
     return multiply;
 }
 
-//takes the num1 and num2 and the operator:
+let operator='';
+let num1='';
+let num2='';
 
-//...implement the code
-//call the right function
 function operate(operator){
     if (operator === "-"){
         return subtract();
@@ -34,4 +34,10 @@ function operate(operator){
         return multiply();
     }
     
+}
+//display the numbers when clicked:
+
+function displayNumber(number){
+    let displayNumber = document.querySelector('.display');
+    displayNumber.textContent = number;
 }
