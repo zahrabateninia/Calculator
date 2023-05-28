@@ -14,12 +14,12 @@ function multiply(num1,num2){
     let multiply = num1 * num2;
     return multiply;
 }
-//variables
+
+
 let operator='';
 let num1='';
 let num2='';
-// Create a new function operate that takes an operator and 
-//2 numbers and then calls one of the above functions on the numbers.
+
 function operate(operator, num1, num2){
     if (operator === "-"){
         return subtract(num1,num2);
@@ -31,19 +31,25 @@ function operate(operator, num1, num2){
     if (operator === "÷"){
         return divide(num1,num2);
     }
-    if (operator === "×"){
+    if (operator === "*"){
         return multiply(num1,num2);
     }
     
 }
-//display the numbers when clicked:
 
 function displayNumber(number){
-    let displayNumber = document.querySelector('.display');
-    displayNumber.textContent = number;
+    let display= document.querySelector('.display');
+    display.textContent = number;
+}
+function populate(e){
+    let clickedNum = e.target.innerText;
+    displayNumber(clickedNum);
+
 }
 
-function populate(e){
+let allNumbers = document.getElementsByClassName('number');
 
-
+for(let i=0; i<allNumbers.length ; i++){
+    const numbers = allNumbers[i];
+    numbers.addEventListener('click', populate);
 }
