@@ -36,20 +36,33 @@ function operate(operator, num1, num2){
     }
     
 }
-
-function displayNumber(number){
-    let display= document.querySelector('.display');
-    display.textContent = number;
-}
-function populate(e){
-    let clickedNum = e.target.innerText;
-    displayNumber(clickedNum);
-
-}
-
+//***********/
 let allNumbers = document.getElementsByClassName('number');
 
 for(let i=0; i<allNumbers.length ; i++){
     const numbers = allNumbers[i];
     numbers.addEventListener('click', populate);
+}
+
+function populate(e){
+    let clickedBtn = e.target.innerText;
+    displayBtn(clickedBtn);
+    
+}
+//***********/
+let allOperators = document.getElementsByClassName('operator');
+for(let i; i<allOperators; i++){
+    const operators = allOperators[i];
+    operators.addEventListener('click' ,setOperator);
+}
+function setOperator(e){
+    let operator = e.target.innerText;
+    return operator;
+}
+//***********/
+
+
+let display= document.querySelector('.display');
+function displayBtn(clickedBtn){
+    display.textContent = clickedBtn;
 }
