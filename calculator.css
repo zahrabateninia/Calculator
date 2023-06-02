@@ -26,6 +26,7 @@ html{
 
 }
 .display{
+    height: 5.5rem;
     background-color: rgb(99, 91, 91);
     padding: 1rem;
     margin: .6rem;

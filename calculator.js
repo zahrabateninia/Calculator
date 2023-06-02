@@ -63,8 +63,8 @@ function setOperator(e){
 }
 //***********/
 
-
 let display= document.querySelector('.display');
 function displayValue(clickedBtn){
-    display.textContent = clickedBtn;
+    display.textContent += clickedBtn;
+
 }
