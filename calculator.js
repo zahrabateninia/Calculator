@@ -38,31 +38,33 @@ function operate(operator, num1, num2){
 }
 //***********/
 let allNumbers = document.getElementsByClassName('number');
-
 for(let i=0; i<allNumbers.length ; i++){
     const numbers = allNumbers[i];
+    // console.log(numbers);
     numbers.addEventListener('click', populate);
 }
 
 function populate(e){
     let clickedBtn = e.target.innerText;
-    displayBtn(clickedBtn);
+    displayValue(clickedBtn);
     
 }
 //***********/
 let allOperators = document.getElementsByClassName('operator');
-for(let i; i<allOperators; i++){
-    const operators = allOperators[i];
+for(let j=0; j<allOperators.length; j++){
+    const operators = allOperators[j];
+    console.log(operators);
     operators.addEventListener('click' ,setOperator);
 }
 function setOperator(e){
     let operator = e.target.innerText;
-    return operator;
+    console.log(operator);
+    displayValue(operator);
 }
 //***********/
 
 
 let display= document.querySelector('.display');
-function displayBtn(clickedBtn){
+function displayValue(clickedBtn){
     display.textContent = clickedBtn;
 }
