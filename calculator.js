@@ -3,36 +3,19 @@ let num1='';
 let num2='';
 let isFirstNum = true;
 
-function add(num1,num2){
-    let add = num1 + num2;
-    return add;
-};
-function divide(num1,num2){
-    let divide = num1/num2;
-    return divide;
-};
-function subtract(num1,num2){
-    let subtract = num1 - num2;
-    return subtract;
-}
-function multiply(num1,num2){
-    let multiply = num1 * num2;
-    return multiply;
-}
-
 function operate(operator, num1, num2){
     if (operator === "-"){
-        return subtract(num1,num2);
+        return num1 - num2;
     }
     
     if (operator === "+"){
-        return add(num1,num2);
+        return num1 + num2;
     }
     if (operator === "÷"){
-        return divide(num1,num2);
+        return num1/num2;
     }
-    if (operator === "*"){
-        return multiply(num1,num2);
+    if (operator === "×"){
+        return num1 * num2;
     }
 }
 //***********/
@@ -62,9 +45,10 @@ for(let j=0; j<allOperators.length; j++){
     operators.addEventListener('click' ,setOperator);
 }
 function setOperator(e){
-    let operator = e.target.innerText;
+    operator = e.target.innerText;
     displayValue(operator);
     isFirstNum = false;
+    return operator;
 }
 //***********/
 
@@ -82,12 +66,17 @@ function clearScreen(e){
     //reset the numbers
     num1='';
     num2='';
+
     isFirstNum = true;
 }
 
 //once operate() has been called, update 
 //the display with the ‘solution’ to the operation.
-function displaySolution(){
-    display.textContent = '';
-
+let equalSign = document.querySelector('.equalSign');
+equalSign.addEventListener('click', displaySolution)
+function displaySolution(e){
+    // display.textContent = '';
+    console.log('show the solution')
+    let solution = operate(operator, parseInt(num1), parseInt(num2));
+    display.textContent = solution;
 }
