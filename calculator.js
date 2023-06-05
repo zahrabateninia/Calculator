@@ -68,3 +68,16 @@ function displayValue(clickedBtn){
     display.textContent += clickedBtn;
 
 }
+
+//AC button if clicked clear the display screen 
+let acBtn = document.querySelector('.ac');
+acBtn.addEventListener('click', clearScreen);
+function clearScreen(e){
+    display.textContent = '';
+}
+
+//once operate() has been called, update 
+//the display with the ‘solution’ to the operation.
+function displaySolution(){
+    display.remove();
+}
