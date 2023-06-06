@@ -28,14 +28,15 @@ for(let i=0; i<allNumbers.length ; i++){
 function populate(e){
     let num = e.target.innerText;
     if (isFirstNum){
-        num1 = num;
+        num1 = num1.concat(num);
         console.log('first num')
         displayValue(num1);
     }else{
-        num2 = num;
+        num2 = num2.concat(num);
         console.log('second num')
         displayValue(num2);
     }
+  
    }
 
 //***********/
@@ -48,13 +49,14 @@ function setOperator(e){
     operator = e.target.innerText;
     displayValue(operator);
     isFirstNum = false;
-    return operator;
 }
 //***********/
 
 let display= document.querySelector('.display');
-function displayValue(clickedBtn){
-    display.textContent += clickedBtn;
+function displayValue(){
+    // display.textContent = clickedBtn;
+    display.textContent = num1 + operator + num2;
+    
 
 }
 
@@ -66,7 +68,7 @@ function clearScreen(e){
     //reset the numbers
     num1='';
     num2='';
-
+    operator = '';
     isFirstNum = true;
 }
 
@@ -74,9 +76,20 @@ function clearScreen(e){
 //the display with the ‘solution’ to the operation.
 let equalSign = document.querySelector('.equalSign');
 equalSign.addEventListener('click', displaySolution)
-function displaySolution(e){
-    // display.textContent = '';
-    console.log('show the solution')
+function displaySolution(){
     let solution = operate(operator, parseInt(num1), parseInt(num2));
     display.textContent = solution;
+    num1= solution;
+    num2= '';
 }
+
+//Pressing = before entering all of the numbers or an operator 
+//could cause problems!
+
+
+//Display a snarky error message if the user tries to 
+//divide by 0… and don’t let it crash your calculator!
+
+
+//You should round answers with long decimals so that 
+//they don’t overflow the screen.
