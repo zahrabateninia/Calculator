@@ -29,11 +29,9 @@ function populate(e){
     let num = e.target.innerText;
     if (isFirstNum){
         num1 = num1.concat(num);
-        console.log('first num')
         displayValue(num1);
     }else{
         num2 = num2.concat(num);
-        console.log('second num')
         displayValue(num2);
     }
   
@@ -78,18 +76,8 @@ let equalSign = document.querySelector('.equalSign');
 equalSign.addEventListener('click', displaySolution)
 function displaySolution(){
     let solution = operate(operator, parseInt(num1), parseInt(num2));
+    solution = Math.round(solution * 1000000)/1000000;
     display.textContent = solution;
     num1= solution;
     num2= '';
 }
-
-//Pressing = before entering all of the numbers or an operator 
-//could cause problems!
-
-
-//Display a snarky error message if the user tries to 
-//divide by 0… and don’t let it crash your calculator!
-
-
-//You should round answers with long decimals so that 
-//they don’t overflow the screen.
